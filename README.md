@@ -1,16 +1,131 @@
-# React + Vite
+# Dream Room - React Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A warm, responsive React web application for browsing thoughtful home décor and cozy living essentials.
 
-Currently, two official plugins are available:
+## 📋 Project Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Dream Room is a frontend e-commerce website built with React. Users can:
 
-## React Compiler
+- Browse home décor products and product details
+- Search, filter, and sort products
+- Add products to their wishlist
+- Add products to the shopping cart and update quantities
+- View cart totals and apply a demo promo code
+- Use frontend-only login and signup forms
+- Explore the Dream Room brand story
+- Use the website on desktop and mobile devices
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+Visit the live application: [Dream Room](https://my-dreamroom.vercel.app/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Used
+
+- **Frontend Framework**: React
+- **Routing**: React Router DOM
+- **Styling**: Custom CSS
+- **State Management**: React Hooks (`useState`, `useEffect`)
+- **Storage**: Browser `localStorage`
+- **Build Tool**: Vite
+
+## 📁 Project Structure
+
+```text
+dream-room/
+├── index.html
+├── package.json
+├── vite.config.js
+├── public/
+│   └── images/
+└── src/
+    ├── App.jsx
+    ├── index.css
+    ├── main.jsx
+    └── components/
+        ├── AboutUs.jsx
+        ├── AboutUs.css
+        ├── Footer.jsx
+        ├── Footer.css
+        ├── Home.jsx
+        ├── Home.css
+        ├── LoginSignup.jsx
+        ├── LoginSignup.css
+        ├── Navbar.jsx
+        ├── Navbar.css
+        ├── ProductDetails.jsx
+        ├── ProductDetails.css
+        ├── Shop.jsx
+        ├── Shop.css
+        ├── ShoppingCart.jsx
+        ├── ShoppingCart.css
+        ├── Wishlist.jsx
+        └── Wishlist.css
+```
+
+Product and category data is kept in `src/App.jsx` and passed to the components using props.
+
+## 🖼️ Images
+
+Place the individual image files inside `public/images/` using these filenames:
+
+```text
+wood-nav.jpg
+dream-room-logo.png
+hero-bedroom.jpg
+account-bedroom.jpg
+about-bedroom.jpg
+artisan-pottery.jpg
+scented-soy-candle.jpg
+rattan-table-lamp.jpg
+rattan-table-lamp-detail.jpg
+rattan-table-lamp-shade.jpg
+linen-cushion-cover.jpg
+potted-eucalyptus-plant.jpg
+stoneware-bud-vase.jpg
+woven-storage-basket.jpg
+cotton-knit-throw.jpg
+travertine-trinket-tray.jpg
+```
+
+The image assets are added separately. Make sure each filename matches the paths used in the code.
+
+## 🚀 Installation
+
+Install [Node.js](https://nodejs.org/) if it is not already installed.
+
+Open the project folder in VS Code, open the terminal, and run:
+
+```bash
+npm install
+```
+
+## ▶️ Run the Application
+
+Start the Vite development server:
+
+```bash
+npm run dev
+```
+
+Open the local URL shown in the terminal in your browser.
+
+## 🏗️ Build the Application
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## 🛒 Demo Functionality
+
+- Cart and wishlist contents are saved in browser `localStorage`.
+- Enter `HOME10` in the cart promo-code field to apply the demo discount.
+- Login and signup forms validate input but do not authenticate users or save passwords.
+- Checkout is a frontend demonstration and does not process payments.
