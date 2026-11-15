@@ -1,0 +1,186 @@
+.site-header {
+  position: relative;
+  background-image: url("/images/wood-nav.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-inner {
+  width: min(100%, 1280px);
+  margin: 0 auto;
+  min-height: 106px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.8rem 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar-logo {
+  width: 170px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.2rem, 3vw, 3rem);
+}
+
+.main-nav a {
+  position: relative;
+  text-decoration: none;
+  color: #5e4c42;
+  font-size: 1.05rem;
+  padding: 0.5rem 0;
+}
+
+.main-nav a.active {
+  color: #4d3c2f;
+}
+
+.main-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.55rem;
+  height: 3px;
+  border-radius: 3px;
+  background: #6d8067;
+}
+
+.wishlist-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.wishlist-symbol {
+  display: inline-block;
+  font-size: 1.2rem;
+  transform: translateY(-1px);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.nav-icon-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  background: transparent;
+  color: #5d3a2a;
+  text-decoration: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.nav-cart-button {
+  position: relative;
+}
+
+.nav-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: #6d8067;
+  color: #fffaf7;
+  font-size: 0.68rem;
+  line-height: 18px;
+  text-align: center;
+}
+
+.nav-search-wrap {
+  width: min(100%, 1280px);
+  margin: 0 auto;
+  padding: 0 1rem 1rem;
+}
+
+.nav-search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: min(620px, 92%);
+  margin: 0 auto;
+}
+
+.nav-search-form input {
+  flex: 1;
+  min-width: 0;
+  min-height: 42px;
+  border: 1px solid rgba(122, 103, 88, 0.28);
+  border-radius: 8px;
+  padding: 0.7rem 0.9rem;
+  background: rgba(255, 250, 244, 0.6);
+  color: #4b382f;
+}
+
+.nav-search-button {
+  min-height: 42px;
+  padding: 0 1rem;
+  border: 0;
+  border-radius: 8px;
+  background: #6d8067;
+  color: #fffaf7;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .nav-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+
+  .navbar-logo {
+    width: 150px;
+  }
+
+  .main-nav {
+    width: 100%;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  .nav-actions {
+    order: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo {
+    width: 130px;
+  }
+
+  .main-nav {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-search-form {
+    width: 92%;
+  }
+}
