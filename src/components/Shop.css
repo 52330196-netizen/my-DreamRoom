@@ -1,0 +1,238 @@
+.shop-page {
+  width: min(100%, 1280px);
+  margin: 0 auto;
+  padding: 0 0 3rem;
+}
+
+.shop-page-inner {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  padding: 0 0 2rem;
+}
+
+.shop-breadcrumbs {
+  margin: 1.5rem 0 1.5rem;
+  font-size: 0.95rem;
+  color: #6f6258;
+}
+
+.shop-breadcrumbs a {
+  color: #6f6258;
+  text-decoration: none;
+}
+
+.shop-header {
+  text-align: center;
+  padding-top: 0.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.shop-header h1 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(2.7rem, 4.8vw, 5rem);
+  line-height: 0.95;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-weight: 400;
+  color: #5d3a2a;
+  letter-spacing: -0.05em;
+}
+
+.shop-header p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #695d54;
+}
+
+.shop-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 1.6rem 0 1.2rem;
+  justify-content: center;
+}
+
+.shop-category-button {
+  border: 1px solid #383d33;
+  background: transparent;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  color: #57453d;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.shop-category-button.active {
+  background: #315b12;
+  color: #fffaf5;
+  border-color: #6d8067;
+}
+
+.shop-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.8rem 0 2rem;
+}
+
+.shop-result-count {
+  margin: 0;
+  color: #6d6259;
+  font-size: 0.96rem;
+}
+
+.shop-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.shop-controls select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 1px solid rgba(120, 96, 79, 0.3);
+  border-radius: 10px;
+  min-width: 150px;
+  padding: 0.72rem 0.9rem;
+  color: #4d3a2f;
+  cursor: pointer;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.shop-product-card {
+  background: rgba(255, 250, 244, 0.75);
+  border: 1px solid rgba(117, 96, 81, 0.17);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 22px rgba(110, 90, 72, 0.05);
+}
+
+.shop-product-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.08 / 1;
+  background: #e7ddcf;
+}
+
+.shop-product-image-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shop-heart {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(100, 82, 68, 0.25);
+  background: rgba(255, 250, 244, 0.85);
+  color: #6f7d66;
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.shop-heart.saved {
+  background: #efe4d5;
+  color: #8d5b46;
+}
+
+.shop-product-meta {
+  padding: 1rem 1rem 1.1rem;
+}
+
+.shop-product-category {
+  margin: 0 0 0.6rem;
+  color: #71675d;
+  font-size: 0.8rem;
+}
+
+.shop-product-name {
+  display: block;
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #4d3b2f;
+}
+
+.shop-product-price {
+  margin: 0.9rem 0 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #55453c;
+}
+
+.shop-empty {
+  padding: 4rem 1rem;
+  text-align: center;
+  color: #695d54;
+  font-size: 1.05rem;
+}
+
+.shop-footer-note {
+  margin: 2.5rem 0 0;
+  text-align: center;
+  color: #675d55;
+  font-size: 0.99rem;
+}
+
+@media (max-width: 980px) {
+  .shop-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .shop-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .shop-page-inner {
+    padding: 0 1rem 2rem;
+  }
+
+  .shop-header h1 {
+    font-size: 2.7rem;
+  }
+
+  .shop-filter-row {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.4rem;
+  }
+
+  .shop-category-button {
+    white-space: nowrap;
+  }
+
+  .shop-controls {
+    width: 100%;
+  }
+
+  .shop-controls select {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .shop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-product-card {
+    border-radius: 14px;
+  }
+}
